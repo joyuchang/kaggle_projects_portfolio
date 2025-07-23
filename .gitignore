@@ -7,4 +7,4 @@ __pycache__/
 .ipynb_checkpoints/
 
 # 避免將Kaggle任務的大型資料集上傳
-kaggle-projects/**/data/
+**/data/
