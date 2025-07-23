@@ -1,0 +1,10 @@
+# 系統與快取
+.DS_Store
+*.pyc
+__pycache__/
+
+# Jupyter自動備份
+.ipynb_checkpoints/
+
+# 避免將Kaggle任務的大型資料集上傳
+kaggle-projects/**/data/
