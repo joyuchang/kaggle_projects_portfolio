@@ -80,22 +80,19 @@ The project follows a step-by-step structure including data exploration, baselin
 - SHAP & XGBoost importance confirmed the dominance of `Title`, `Fare`, `Pclass`
 
 ## Learning Highlights
-- Built custom pipeline for **feature engineering** and **model evaluation**
+- Built custom pipeline for **feature engineering**, **model training**, and **model evaluation**
 - Learned how to apply:
-  - One-hot encoding
-  - Cross-validation (CV)
-  - Model comparison
-  - SHAP interpretability
-  - Submission generation & testing
-- Understood the **gap between CV score and Kaggle leaderborad**
-  - CV Accuracy (XGBoost): **0.8249**
-  - Kaggle Public Score: **0.74401**
-
-## Next steps (Model V3 Plan)
-- Add `Age` (with imputation) into the model
-- Tune XGBoost with `GridSearchCV` or `RandomizedSearchCV`
-- Try **stacking** and advanced ensembling
-- Submit more versions to monitor generalization
+  - One-hot encoding and feature scaling with `ColumnTransformer`
+  - Cross-validation (CV) to measure generalization performance
+  - Model comparison accross TFDF, XGBoost, Voting, and Stacking
+  - SHAP for model interpretability and feature importance
+  - Submission generation and file versioning for Kaggle
+- Created engineered features such as `Title_Grouped`, `FamilySize`, `IsAlone`, and `FarePerPerson`
+- Handled missing values using group-based imputation (e.g. `Age` by `Title`)
+- Applied `GridSearchCV` to tune XGBoost hyperparameters
+- Understood the gap between **cross-validation scores and Kaggle leaderborad scores**
+  - CV Accuracy (XGBoost): **0.8271**
+  - Kaggle Public Score: **0.77751**
 
 ## Notes
 This project is based on the [Kaggle Titanic competition].  
