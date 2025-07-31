@@ -65,12 +65,12 @@ The project follows a step-by-step structure including data exploration, baselin
 ### Submission Comparison Table
 | Version | File Name | Features Used | Model | Tuning | CV Accuracy | Kaggle Public Score | Notes |
 | :- | :- | :- | :- | :- | :- | :- | :- |
-| **V1** | `titanic_submission_v1_2025-07-21.csv` | Raw: `Sex`, `Pclass`, `Fare` | TFDF (ensemble)          | No | N/A | **0.80622** | Best so far, simple ensemble strategy |
+| **V1** | `titanic_submission_v1_2025-07-21.csv` | Raw: `Sex`, `Pclass`, `Fare` | TFDF (ensemble) | No | N/A | **0.80622** | Best so far, simple ensemble strategy |
 | **V2-a** | `titanic_submission_v2_xgboost_2025-07-24.csv` | Engineered: `Title_Grouped`, `IsAlone`, `FamilySize`, `FarePerPerson`, `FamilyGroup` | XGBoost | No | 0.8249 | 0.74401 | Strong CV, overfit suspected |
 | **V2-b** | `titanic_submission_v2_ensemble_2025-07-24.csv` | Same as V2-a | XGB + others (soft-vote) | No | \~0.826 | 0.74641 | Slight improvement from voting |
 | **V3-a** | `titanic_submission_v3-a_xgb_tuned_2025-07-31.csv` | V2 features + `Age` (imputed) | XGBoost | GridSearchCV | 0.9293 | 0.75358 | Main baseline for V3 |
 | **V3-b** | `titanic_submission_v3-b_voting_ensemble_2025-07-31.csv` | V3 features | VotingClassifier | No | 0.8316 | 0.77751 | Combine multiple algorithms |
-| **V3-c** | `titanic_submission_v3-c_stacking_ensemble_2025-07-31.csv` | V3 features | StackingClassifier | No / Light | 0.8271 | 0.77272 | Deep ensemble (if needed) |
+| **V3-c** | `titanic_submission_v3-c_stacking_ensemble_2025-07-31.csv` | V3 features | StackingClassifier | No / Light | 0.8271 | 0.77272 | Deep ensemble, meta-level fusion |
 
 
 ## Key EDA insights  
@@ -100,4 +100,4 @@ The project follows a step-by-step structure including data exploration, baselin
 ## Notes
 This project is based on the [Kaggle Titanic competition].  
 I aim to use this project as a foundation for future ML/DS learning and portfolio building.
-2025-07-24
+2025-07-31
